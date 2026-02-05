@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Anime Vault</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Anime Vault</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<header>
-  <h1>🍥 Anime Vault</h1>
-  <input type="text" id="searchInput" placeholder="Search anime or movie..." oninput="renderAnime()">
-</header>
+<header>🎌 Anime Vault</header>
 
-<section class="form">
-  <input id="titleInput" placeholder="Title">
+<input id="search" placeholder="🔍 Search anime / movie" oninput="renderAll()">
 
-  <input id="genreInput" placeholder="Genres (Action, Romance)">
-  <input id="subGenreInput" placeholder="Sub-genres (Isekai, Ecchi)">
+<select id="type">
+  <option value="Anime">Anime</option>
+  <option value="Movie">Movie</option>
+</select>
 
-  <select id="typeInput">
-    <option>Anime</option>
-    <option>Movie</option>
-    <option>OVA</option>
-    <option>Special</option>
-  </select>
+<input id="name" placeholder="Name">
+<input id="rating" type="number" step="0.1" placeholder="Rating (9.2)">
+<input id="genres" placeholder="Genres (Action, Romance)">
 
-  <input type="number" id="ratingInput" step="0.1" min="0" max="10" placeholder="Rating (9.6)">
+<label><input type="checkbox" id="watched"> Watched</label>
+<label><input type="checkbox" id="fav"> ❤️ Favorite</label>
 
-  <button onclick="addAnime()">➕ Add</button>
-</section>
+<button onclick="addItem()">➕ Add</button>
+<button id="installBtn" hidden>📲 Install App</button>
 
-<section class="controls">
-  <button onclick="sortByRating()">⬇️ Sort by Rating</button>
-  <button onclick="showTopRated()">🔥 Top Rated</button>
-  <button onclick="renderAnime()">🔁 All</button>
-</section>
+<hr>
 
-<section id="animeList"></section>
+<h3>📊 Stats</h3>
+<div id="stats"></div>
 
-<script src="aap.js"></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-  }
-</script>
+<h3>⭐ Top Rated</h3>
+<div id="topRated"></div>
+
+<h3>🔥 Top Genres</h3>
+<div id="topGenres"></div>
+
+<h3>📚 Library</h3>
+<div id="list"></div>
+
+<script src="app.js"></script>
 </body>
 </html>
