@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Anime Vault</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <title>Anime Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>🎌 Anime Vault</header>
+<h1>👀 Anime Tracker</h1>
 
-<input id="search" placeholder="🔍 Search anime / movie" oninput="renderAll()">
+<div class="box">
+  <input id="title" placeholder="Anime / Movie name">
+  <input id="rating" type="number" step="0.1" placeholder="Rating (0 - 10)">
 
-<select id="type">
-  <option value="Anime">Anime</option>
-  <option value="Movie">Movie</option>
-</select>
+  <div class="genres">
+    <button onclick="toggleGenre(this)">Action</button>
+    <button onclick="toggleGenre(this)">Romance</button>
+    <button onclick="toggleGenre(this)">Comedy</button>
+    <button onclick="toggleGenre(this)">Fantasy</button>
+  </div>
 
-<input id="name" placeholder="Name">
-<input id="rating" type="number" step="0.1" placeholder="Rating (9.2)">
-<input id="genres" placeholder="Genres (Action, Romance)">
+  <label><input type="checkbox" id="completed"> Completed</label>
 
-<label><input type="checkbox" id="watched"> Watched</label>
-<label><input type="checkbox" id="fav"> ❤️ Favorite</label>
+  <button class="add" onclick="addAnime()">Add Anime</button>
+</div>
 
-<button onclick="addItem()">➕ Add</button>
-<button id="installBtn" hidden>📲 Install App</button>
+<button class="sort" onclick="sortByRating()">Sort by Rating ⭐</button>
 
-<hr>
-
-<h3>📊 Stats</h3>
-<div id="stats"></div>
-
-<h3>⭐ Top Rated</h3>
-<div id="topRated"></div>
-
-<h3>🔥 Top Genres</h3>
-<div id="topGenres"></div>
-
-<h3>📚 Library</h3>
 <div id="list"></div>
 
-<script src="app.js"></script>
+<script src="aap.js"></script>
 </body>
 </html>
