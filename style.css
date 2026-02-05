@@ -1,58 +1,48 @@
 body {
-  background: #0b1220;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
+  background:#0f172a;
+  color:white;
+  font-family:Arial;
+  padding:15px;
 }
 
 header {
-  padding: 15px;
-  text-align: center;
-  background: #020617;
-}
-
-header input {
-  width: 90%;
-  padding: 8px;
-  margin-top: 10px;
-}
-
-.form, .controls {
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
+  text-align:center;
+  font-size:24px;
+  margin-bottom:10px;
 }
 
 input, select, button {
-  padding: 8px;
+  width:100%;
+  padding:8px;
+  margin:4px 0;
+  border-radius:6px;
+  border:none;
 }
 
 button {
-  background: #2563eb;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-#animeList {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
+  background:#22c55e;
+  font-weight:bold;
 }
 
 .card {
-  background: #020617;
-  padding: 10px;
-  border-radius: 6px;
+  background:#1e293b;
+  padding:10px;
+  border-radius:10px;
+  margin:8px 0;
 }
 
-.card h3 {
-  margin: 0;
+.badge {
+  padding:3px 7px;
+  border-radius:6px;
+  margin-right:4px;
+  font-size:12px;
 }
 
-.favorite {
-  color: red;
-}
+/* 🎨 GENRE COLORS */
+.Action { background:#ef4444; }
+.Romance { background:#ec4899; }
+.Comedy { background:#facc15; color:black; }
+.Fantasy { background:#8b5cf6; }
+.Horror { background:#000; }
+.Sci-Fi { background:#06b6d4; }
+.Drama { background:#22c55e; color:black; }
