@@ -1,65 +1,58 @@
 body {
-  margin: 0;
-  background: #0f0f14;
-  color: white;
+  background: #0b1220;
+  color: #fff;
   font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 header {
   padding: 15px;
   text-align: center;
+  background: #020617;
 }
 
-#search {
+header input {
   width: 90%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.form, .controls {
   padding: 10px;
-  border-radius: 20px;
-  border: none;
-}
-
-h3 {
-  padding-left: 12px;
-}
-
-#genres, #subgenres {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 10px;
+  justify-content: center;
 }
 
-.genre {
-  padding: 6px 14px;
-  border: 1px solid #555;
-  border-radius: 20px;
+input, select, button {
+  padding: 8px;
+}
+
+button {
+  background: #2563eb;
+  border: none;
+  color: white;
   cursor: pointer;
-  font-size: 14px;
 }
 
-.genre.active {
-  background: #ff3b3b;
-  border-color: #ff3b3b;
-}
-
-.sub {
-  font-size: 12px;
-  opacity: 0.85;
-}
-
-#anime-list {
+#animeList {
+  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  padding: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
 }
 
 .card {
-  background: #1a1a22;
+  background: #020617;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
-.star {
-  cursor: pointer;
-  color: gold;
+.card h3 {
+  margin: 0;
+}
+
+.favorite {
+  color: red;
 }
