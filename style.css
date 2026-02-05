@@ -1,48 +1,85 @@
-body {
-  background:#0f172a;
+body{
+  background:#0b1020;
   color:white;
   font-family:Arial;
-  padding:15px;
-}
-
-header {
   text-align:center;
-  font-size:24px;
-  margin-bottom:10px;
 }
 
-input, select, button {
+h1{margin-top:20px}
+
+.box{
+  width:90%;
+  max-width:500px;
+  margin:auto;
+}
+
+input{
   width:100%;
-  padding:8px;
-  margin:4px 0;
+  padding:10px;
+  margin:6px 0;
   border-radius:6px;
   border:none;
 }
 
-button {
-  background:#22c55e;
+.genres button{
+  margin:5px;
+  padding:6px 10px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:#333;
+  color:white;
+}
+
+.genres .active{
+  background:#4facfe;
+}
+
+.add{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  background:#4facfe;
+  border:none;
+  border-radius:6px;
   font-weight:bold;
 }
 
-.card {
-  background:#1e293b;
-  padding:10px;
-  border-radius:10px;
-  margin:8px 0;
-}
-
-.badge {
-  padding:3px 7px;
+.sort{
+  margin:15px;
+  padding:8px 15px;
+  border:none;
   border-radius:6px;
-  margin-right:4px;
-  font-size:12px;
 }
 
-/* 🎨 GENRE COLORS */
-.Action { background:#ef4444; }
-.Romance { background:#ec4899; }
-.Comedy { background:#facc15; color:black; }
-.Fantasy { background:#8b5cf6; }
-.Horror { background:#000; }
-.Sci-Fi { background:#06b6d4; }
-.Drama { background:#22c55e; color:black; }
+.card{
+  background:#141a33;
+  margin:10px auto;
+  padding:12px;
+  width:90%;
+  max-width:500px;
+  border-radius:8px;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:15px;
+  font-size:12px;
+  margin:3px;
+}
+
+.Action{background:#ff4d4d}
+.Romance{background:#ff79c6}
+.Comedy{background:#ffd166;color:black}
+.Fantasy{background:#8e44ad}
+
+.delete{
+  margin-top:8px;
+  background:#ff4d4d;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  color:white;
+  cursor:pointer;
+}
