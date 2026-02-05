@@ -1,12 +1,3 @@
-self.addEventListener("install", e => {
-  e.waitUntil(
-    caches.open("anime-vault").then(cache =>
-      cache.addAll([
-        "./",
-        "./index.html",
-        "./style.css",
-        "./aap.js"
-      ])
-    )
-  );
+self.addEventListener("fetch", e=>{
+  e.respondWith(fetch(e.request).catch(()=>new Response("Offline")));
 });
