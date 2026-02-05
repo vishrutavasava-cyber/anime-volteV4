@@ -1,8 +1,0 @@
-{
-  "name": "Anime Vault",
-  "short_name": "Vault",
-  "start_url": "./",
-  "display": "standalone",
-  "theme_color": "#22c55e",
-  "background_color": "#0f172a"
-}
