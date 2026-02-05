@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Anime Vault</title>
-
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>🍥 Anime Vault</h1>
-  <input id="search" type="text" placeholder="Search anime..." />
+  <input type="text" id="searchInput" placeholder="Search anime or movie..." oninput="renderAnime()">
 </header>
 
-<h3>Genres</h3>
-<section id="genres"></section>
+<section class="form">
+  <input id="titleInput" placeholder="Title">
 
-<h3>Sub Genres</h3>
-<section id="subgenres"></section>
+  <input id="genreInput" placeholder="Genres (Action, Romance)">
+  <input id="subGenreInput" placeholder="Sub-genres (Isekai, Ecchi)">
 
-<section id="anime-list"></section>
+  <select id="typeInput">
+    <option>Anime</option>
+    <option>Movie</option>
+    <option>OVA</option>
+    <option>Special</option>
+  </select>
 
-<script src="app.js"></script>
+  <input type="number" id="ratingInput" step="0.1" min="0" max="10" placeholder="Rating (9.6)">
+
+  <button onclick="addAnime()">➕ Add</button>
+</section>
+
+<section class="controls">
+  <button onclick="sortByRating()">⬇️ Sort by Rating</button>
+  <button onclick="showTopRated()">🔥 Top Rated</button>
+  <button onclick="renderAnime()">🔁 All</button>
+</section>
+
+<section id="animeList"></section>
+
+<script src="aap.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
 </body>
 </html>
